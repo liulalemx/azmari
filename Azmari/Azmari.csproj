@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{27C9A737-6807-4D89-99A7-B5363B1016FF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Azmari</RootNamespace>
+    <AssemblyName>Azmari</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Bunifu.Core, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL" />
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\..\Downloads\Compressed\_Getintopc.com_Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\..\..\Downloads\Compressed\_Getintopc.com_Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>..\..\..\..\Downloads\Compressed\_Getintopc.com_Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>..\..\..\..\Downloads\Compressed\_Getintopc.com_Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\Downloads\Compressed\_Getintopc.com_Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Artist.cs" />
+    <Compile Include="CRArtistReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRArtistReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DBService.cs" />
+    <Compile Include="DSArtistReport.cs">
+      <DependentUpon>DSArtistReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSArtistReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSArtistReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Listener.cs" />
+    <Compile Include="Music.cs" />
+    <Compile Include="musicPlayer.cs" />
+    <Compile Include="Ui_ArtistHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui_ArtistHome.Designer.cs">
+      <DependentUpon>Ui_ArtistHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui_ArtistPublish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui_ArtistPublish.Designer.cs">
+      <DependentUpon>Ui_ArtistPublish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui_ArtistReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui_ArtistReport.Designer.cs">
+      <DependentUpon>Ui_ArtistReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui_ArtistSignup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui_ArtistSignup.Designer.cs">
+      <DependentUpon>Ui_ArtistSignup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui_ListenerHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui_ListenerHome.Designer.cs">
+      <DependentUpon>Ui_ListenerHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui_ListenerSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui_ListenerSearch.Designer.cs">
+      <DependentUpon>Ui_ListenerSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui_UserLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui_UserLogin.Designer.cs">
+      <DependentUpon>Ui_UserLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ui_ListenerSignup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui_ListenerSignup.Designer.cs">
+      <DependentUpon>Ui_ListenerSignup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui_UserUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui_UserUpdate.Designer.cs">
+      <DependentUpon>Ui_UserUpdate.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CRArtistReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRArtistReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui_ArtistHome.resx">
+      <DependentUpon>Ui_ArtistHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui_ArtistPublish.resx">
+      <DependentUpon>Ui_ArtistPublish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui_ArtistReport.resx">
+      <DependentUpon>Ui_ArtistReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui_ArtistSignup.resx">
+      <DependentUpon>Ui_ArtistSignup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui_ListenerHome.resx">
+      <DependentUpon>Ui_ListenerHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui_ListenerSearch.resx">
+      <DependentUpon>Ui_ListenerSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui_UserLogin.resx">
+      <DependentUpon>Ui_UserLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Ui_ListenerSignup.resx">
+      <DependentUpon>Ui_ListenerSignup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui_UserUpdate.resx">
+      <DependentUpon>Ui_UserUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DSArtistReport.xsc">
+      <DependentUpon>DSArtistReport.xsd</DependentUpon>
+    </None>
+    <None Include="DSArtistReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSArtistReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSArtistReport.xss">
+      <DependentUpon>DSArtistReport.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
