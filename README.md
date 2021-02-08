@@ -2,7 +2,7 @@
 
 AMARI is a music player program that lets users post music and listen to music made by others.
 
-![Game title screen](./AzmariSnapshot.jpg)
+![Azmari Usage](./azmari.gif)
 
 ## Getting Started
 
